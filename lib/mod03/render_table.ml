@@ -43,13 +43,12 @@ let render_separator widths =
   "|-" ^ (String.concat "-+-" dashes) ^ "-|"
 ;;
 
+let pad s length = s ^ String.make (length - String.length s) ' '
+
 let render_row widths row =
-  let pad s length = s ^ String.make (length - String.length s) ' ' in
   let padded = List.map2 pad row widths in
   "| " ^ (String.concat " | " padded) ^ " |"
 ;;
-
-(* Bring all together *)
 
 let render_table ~header ~rows =
   let widths = max_col_width header rows in
