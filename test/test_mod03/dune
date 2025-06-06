@@ -1,0 +1,5 @@
+(library
+ (name test_mod03)
+ (libraries mod03 alcotest)
+ (modules render_table))
+
