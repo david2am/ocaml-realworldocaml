@@ -1,4 +1,5 @@
-open Mod03.Render_table
+open Alcotest
+open Mod_03.Render_table
 
 let header = ["language";"architect";"first release"]
 let rows = [
@@ -38,3 +39,15 @@ let test_render_table () =
   let actual = render_table ~header ~rows in
 
   Alcotest.(check string) "" expected actual
+
+
+let () =
+  run "Real World OCaml" [
+    "Lists", [
+      test_case "* max_col_width" `Quick test_max_col_width;     
+      test_case "* render_separator" `Quick test_render_separator;     
+      test_case "* pad" `Quick test_pad;     
+      test_case "* render_row" `Quick test_render_row;     
+      test_case "* render_table" `Quick test_render_table;     
+    ];
+  ]

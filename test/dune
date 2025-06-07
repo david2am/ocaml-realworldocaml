@@ -1,3 +1,0 @@
-(test
- (name test_ocaml_realworldocaml)
- (libraries alcotest test_mod03))
