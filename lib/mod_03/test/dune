@@ -1,3 +1,4 @@
 (test
  (name test_render_table)
- (libraries alcotest mod_03))
+ (libraries alcotest mod_03)
+ (modules test_render_table test_extensions))
