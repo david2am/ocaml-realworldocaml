@@ -1,4 +1,4 @@
 (executable
  (public_name realworldocaml)
  (name main)
- (libraries mod_03))
+ (libraries mod_03 mod_04))

@@ -31,10 +31,10 @@ render_table
 
 let max_col_width header rows =
   let lengths = List.map String.length in
-  let max = List.map2 Int.max in
+  let max2 = List.map2 Int.max in
   
   List.fold_left (
-    fun acc row -> max acc @@ lengths row
+    fun acc row -> max2 acc @@ lengths row
   ) (lengths header) rows 
 ;;
 
