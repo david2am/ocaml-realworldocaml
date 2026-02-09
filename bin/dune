@@ -1,4 +1,4 @@
 (executable
- (public_name ocaml-realworldocaml)
+ (public_name realworldocaml)
  (name main)
  (libraries mod_03))
